@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <!--z pickera kosci -->
+    <color name="yellowCoach">#DC911B</color>
+    <color name="red">#a51123</color>
+    <color name="in">#7af188b7</color>
+    <color name="out">#4582e5</color>
+</resources>

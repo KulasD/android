@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NetworkSignal</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="spinner_prompt">Select Building</string>
+
+    <string name="warning">Warning</string>
+    <string name="dialog_message">Building name has less than 4 characters. Proceed?</string>
+    <!-- z klikera kosci -->
+    <string name="pick_the_bone">Pick the : %s bone</string>
+    <string name="demo_image">Demo image</string>
+    <string name="demo_string">Demo name</string>
+</resources>
