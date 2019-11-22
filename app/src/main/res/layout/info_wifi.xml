@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:gauge="http://schemas.android.com/apk/res-auto"
-    tools:context=".InfoWifi">
+    tools:context=".InfoWifi"
+    android:background="#000000">
 
 
     <ScrollView
@@ -27,7 +28,7 @@
         android:layout_alignParentTop="true"
         android:text=""
         android:textSize="18sp"
-        android:textColor="#000000" />
+        android:textColor="#ffffff" />
 
     <de.nitri.gauge.Gauge
         android:id="@+id/gauge"

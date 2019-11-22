@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Build;
@@ -15,11 +16,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ventus.networksignal.R;
@@ -59,7 +62,22 @@ public class FriendlyWifis extends Activity {
 		building = intent.getStringExtra("BUILDING_NAME");
 		wifis=db.getFriendlyWifis(building);
 		arrayAdapter = new ArrayAdapter<Router>(this,
-				android.R.layout.simple_list_item_1, wifis);
+				android.R.layout.simple_list_item_1, wifis){
+			@Override
+			public View getView(int position, View convertView, ViewGroup parent){
+				// Get the Item from ListView
+				View view = super.getView(position, convertView, parent);
+
+				// Initialize a TextView for ListView each Item
+				TextView tv = (TextView) view.findViewById(android.R.id.text1);
+
+				// Set the text color of TextView (ListView Item)
+				tv.setTextColor(Color.WHITE);
+
+				// Generate ListView Item using TextView
+				return view;
+			}
+		};
 		// Set The Adapter
 		wifisList.setAdapter(arrayAdapter);
 		save.setOnClickListener(new OnClickListener() {

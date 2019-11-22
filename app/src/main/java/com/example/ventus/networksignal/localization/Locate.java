@@ -39,21 +39,27 @@ public class Locate extends Activity implements ItemClickListener<PinItem> {
 			"Winda",
 			"Ubikacja męska",
 			"C109",
-			"C112"
+			"C112",
+			"C111",
+			"Korytarz 1",
+			"Korytarz 2"
 	};
 	private PointF[] pointFs = new PointF[]{
-			new PointF(0.33f, 0.40f),  //C102
-			new PointF(0.53f, 0.40f),  //C106
-			new PointF(0.47f, 0.60f),  //C105
-			new PointF(0.55f, 0.60f),  //Schody 1
+			new PointF(0.27f, 0.30f),  //C102
+			new PointF(0.48f, 0.30f),  //C106
+			new PointF(0.44f, 0.65f),  //C105
+			new PointF(0.55f, 0.64f),  //Schody 1
 			new PointF(0.16f, 0.55f),  //C100
-			new PointF(0.10f, 0.45f),  //Schody 2
+			new PointF(0.09f, 0.43f),  //Schody 2
 			new PointF(0.60f, 0.35f),  //Ubikacja niepełnosprawnych
-			new PointF(0.65f, 0.35f),  //Ubikacja damska
+			new PointF(0.65f, 0.32f),  //Ubikacja damska
 			new PointF(0.695f, 0.35f), //Winda
-			new PointF(0.74f, 0.35f),  //Ubikacja męska
-			new PointF(0.65f, 0.60f),  //C109
-			new PointF(0.80f, 0.60f)   //C112
+			new PointF(0.74f, 0.32f),  //Ubikacja męska
+			new PointF(0.68f, 0.65f),  //C109
+			new PointF(0.84f, 0.65f),   //C112
+			new PointF(0.84f, 0.30f),   //C111
+			new PointF(0.33f, 0.49f),   //Korytarz 1
+			new PointF(0.76f, 0.48f)   //Korytarz 2
 	};
 
 	/* Item Map view*/
@@ -61,7 +67,7 @@ public class Locate extends Activity implements ItemClickListener<PinItem> {
 
 	/*List of item to show on map view*/
 	private List<PinItem> items;
-	public static final int NB_ELEMENTS = 12;
+	public static final int NB_ELEMENTS = 15;
 
 	ArrayList<String> buildings;
 	DatabaseHelper db;
@@ -112,20 +118,21 @@ public class Locate extends Activity implements ItemClickListener<PinItem> {
         else{
 
 
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(false);
-		builder.setTitle("Choose building");
-		builder.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
+		//AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        //builder.setCancelable(false);
+		//builder.setTitle("Choose building");
+		//builder.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
+		//	@Override
+		//	public void onClick(DialogInterface dialog, int which) {
 				// the user clicked on colors[which]
-				building = buildings.get(which);
+		//		building = buildings.get(which);
+				building = "PWSZ_1";
 
 							
 				
-			}
-		});
-		builder.show();
+		//	}
+		//});
+		//builder.show();
         }
 
 		items = new ArrayList<>();

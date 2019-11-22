@@ -62,7 +62,7 @@ public class Scan extends Activity {
 		setContentView(R.layout.scan);
 		warning = (TextView) findViewById(R.id.TextView1);
 		timeRemaining = (TextView) findViewById(R.id.TextView2);
-		calibrate = (Button) findViewById(R.id.start);
+		//calibrate = (Button) findViewById(R.id.start);
 
 		wifi = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 		Intent intent = getIntent();
@@ -87,10 +87,10 @@ public class Scan extends Activity {
 		if(intent.getBooleanExtra("isLearning",true))
 			currentPositionName = intent.getStringExtra("POSITION_NAME");
 		
-		calibrate.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				calibrate.setEnabled(false);
+		//calibrate.setOnClickListener(new OnClickListener() {
+		//	@Override
+		//	public void onClick(View view) {
+				//calibrate.setEnabled(false);
 				warning.setText("DO NOT MOVE FOR");
 				resultsData = new ArrayList<ResultData>();
 				currentCount = 0;
@@ -104,8 +104,8 @@ public class Scan extends Activity {
 					}
 				};
 				timer.schedule(myTimerTask, 0, 1000);
-			}
-		});
+		//	}
+		//});
 
 	}
 

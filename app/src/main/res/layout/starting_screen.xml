@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#000000">
 
 
 
@@ -23,7 +24,8 @@
         android:text="Localization Menu"
         android:layout_centerHorizontal="true"
         android:layout_above="@id/learn_button"
-        android:id="@+id/textView" />
+        android:id="@+id/textView"
+        android:textColor="#ffffff" />
 
     <Button
         android:layout_width="@dimen/button_width"

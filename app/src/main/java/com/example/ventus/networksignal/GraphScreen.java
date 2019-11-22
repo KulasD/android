@@ -77,6 +77,7 @@ public class GraphScreen extends AppCompatActivity {
         // enable description text
         mChart.getDescription().setText("Poziom odbieranego sygnału w dBm");
         mChart.getDescription().setEnabled(true);
+        mChart.getDescription().setTextColor(Color.argb(255,255,255,255));
 
         // enable touch gestures
         mChart.setTouchEnabled(false);
@@ -90,10 +91,10 @@ public class GraphScreen extends AppCompatActivity {
         mChart.setPinchZoom(false);
 
         // set an alternative background color
-        mChart.setBackgroundColor(Color.WHITE);
+        mChart.setBackgroundColor(Color.BLACK);
 
         LineData data = new LineData();
-        data.setValueTextColor(Color.WHITE);
+        data.setValueTextColor(Color.BLACK);
 
         // add empty data
         mChart.setData(data);
@@ -104,16 +105,16 @@ public class GraphScreen extends AppCompatActivity {
         // modify the legend ...
         l.setWordWrapEnabled(true);
         l.setForm(Legend.LegendForm.LINE);
-        l.setTextColor(Color.BLACK);
+        l.setTextColor(Color.WHITE);
 
         XAxis xl = mChart.getXAxis();
-        xl.setTextColor(Color.WHITE);
+        xl.setTextColor(Color.BLACK);
         xl.setDrawGridLines(true);
         xl.setAvoidFirstLastClipping(true);
         xl.setEnabled(true);
 
         YAxis leftAxis = mChart.getAxisLeft();
-        leftAxis.setTextColor(Color.BLACK);
+        leftAxis.setTextColor(Color.WHITE);
         leftAxis.setDrawGridLines(false);
         leftAxis.setAxisMaximum(-20f);
         leftAxis.setAxisMinimum(-100f);
@@ -179,6 +180,8 @@ public class GraphScreen extends AppCompatActivity {
         set.setColor(color);
         set.setHighlightEnabled(false);
         set.setDrawValues(true);
+        int colortext = Color.argb(255,255,255,255);
+        set.setValueTextColor(colortext);
         set.setDrawCircles(false);
         set.setMode(LineDataSet.Mode.CUBIC_BEZIER);
         set.setCubicIntensity(0.2f);
